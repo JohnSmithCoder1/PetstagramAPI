@@ -23,6 +23,7 @@ public class App {
     func postInit() throws {
         // Endpoints
         initializeHealthRoutes(app: self)
+        initializePostRoutes(app: self)
     }
 
     public func run() throws {
