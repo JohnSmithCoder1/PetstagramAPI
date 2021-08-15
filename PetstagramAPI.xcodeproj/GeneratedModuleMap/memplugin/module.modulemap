@@ -1,0 +1,4 @@
+module memplugin {
+    umbrella "/Users/banana_viking/Coding/MyApps/PetstagramAPI/.build/checkouts/omr-agentcore/src/memplugin/include"
+    export *
+}

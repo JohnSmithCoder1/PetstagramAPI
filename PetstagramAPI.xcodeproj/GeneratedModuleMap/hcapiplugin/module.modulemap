@@ -1,0 +1,4 @@
+module hcapiplugin {
+    umbrella "/Users/banana_viking/Coding/MyApps/PetstagramAPI/.build/checkouts/omr-agentcore/src/hcapiplugin/include"
+    export *
+}
