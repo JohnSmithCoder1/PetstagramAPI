@@ -2749,9 +2749,9 @@
 		OBJ_95 /* APIConnector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIConnector.h; sourceTree = "<group>"; };
 		OBJ_96 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = /Users/banana_viking/Coding/MyApps/PetstagramAPI/PetstagramAPI.xcodeproj/GeneratedModuleMap/hcapiplugin/module.modulemap; sourceTree = "<group>"; };
 		OBJ_98 /* MemoryPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryPlugin.cpp; sourceTree = "<group>"; };
-		"PetstagramAPI::Application::Product" /* Application.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PetstagramAPI::Application::Product" /* Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"PetstagramAPI::ApplicationTests::Product" /* ApplicationTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"PetstagramAPI::PetstagramAPI::Product" /* PetstagramAPI */ = {isa = PBXFileReference; lastKnownFileType = text; path = PetstagramAPI; sourceTree = BUILT_PRODUCTS_DIR; };
+		"PetstagramAPI::PetstagramAPI::Product" /* PetstagramAPI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = PetstagramAPI; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SSLService::SSLService::Product" /* SSLService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SSLService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Socket::Socket::Product" /* Socket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Socket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwiftMetrics::SwiftBAMDC::Product" /* SwiftBAMDC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftBAMDC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -8723,7 +8723,7 @@
 				INFOPLIST_FILE = PetstagramAPI.xcodeproj/Application_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/memplugin/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/hcapiplugin/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/agentcore/module.modulemap";
@@ -8764,7 +8764,7 @@
 				INFOPLIST_FILE = PetstagramAPI.xcodeproj/Application_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/memplugin/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/hcapiplugin/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/agentcore/module.modulemap";
@@ -10053,7 +10053,7 @@
 				INFOPLIST_FILE = PetstagramAPI.xcodeproj/PetstagramAPI_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/memplugin/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/hcapiplugin/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/agentcore/module.modulemap";
@@ -10091,7 +10091,7 @@
 				INFOPLIST_FILE = PetstagramAPI.xcodeproj/PetstagramAPI_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/memplugin/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/hcapiplugin/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/PetstagramAPI.xcodeproj/GeneratedModuleMap/agentcore/module.modulemap";
