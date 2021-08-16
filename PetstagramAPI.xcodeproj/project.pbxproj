@@ -35,6 +35,7 @@
 		0540850026C98FC70012EEB8 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054084FE26C98FC70012EEB8 /* UserAuthentication.swift */; };
 		0540850126C98FC70012EEB8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054084FF26C98FC70012EEB8 /* Post.swift */; };
 		0540850326C9913D0012EEB8 /* PostRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0540850226C9913D0012EEB8 /* PostRoutes.swift */; };
+		0540861A26CAC53E0012EEB8 /* UserRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0540861926CAC53E0012EEB8 /* UserRoutes.swift */; };
 		OBJ_1027 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_1037 /* SSLPointerTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_317 /* SSLPointerTricks.swift */; };
 		OBJ_1038 /* SSLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_318 /* SSLService.swift */; };
@@ -2488,6 +2489,7 @@
 		054084FE26C98FC70012EEB8 /* UserAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAuthentication.swift; path = "../../../../Petstagram/Petstagram/Service Layer/Models/UserAuthentication.swift"; sourceTree = "<group>"; };
 		054084FF26C98FC70012EEB8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = "../../../../Petstagram/Petstagram/Service Layer/Models/Post.swift"; sourceTree = "<group>"; };
 		0540850226C9913D0012EEB8 /* PostRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRoutes.swift; sourceTree = "<group>"; };
+		0540861926CAC53E0012EEB8 /* UserRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoutes.swift; sourceTree = "<group>"; };
 		"CloudEnvironment::CloudEnvironment::Product" /* CloudEnvironment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudEnvironment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudFoundryEnv::CloudFoundryEnv::Product" /* CloudFoundryEnv.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudFoundryEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Configuration::Configuration::Product" /* Configuration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Configuration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3282,8 +3284,8 @@
 		054084FD26C98F480012EEB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				054084FF26C98FC70012EEB8 /* Post.swift */,
 				054084FE26C98FC70012EEB8 /* UserAuthentication.swift */,
+				054084FF26C98FC70012EEB8 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3364,6 +3366,7 @@
 			children = (
 				OBJ_14 /* HealthRoutes.swift */,
 				0540850226C9913D0012EEB8 /* PostRoutes.swift */,
+				0540861926CAC53E0012EEB8 /* UserRoutes.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -5720,6 +5723,7 @@
 				OBJ_378 /* Application.swift in Sources */,
 				OBJ_379 /* InitializationError.swift in Sources */,
 				0540850326C9913D0012EEB8 /* PostRoutes.swift in Sources */,
+				0540861A26CAC53E0012EEB8 /* UserRoutes.swift in Sources */,
 				OBJ_380 /* Logging.swift in Sources */,
 				OBJ_381 /* Metrics.swift in Sources */,
 				0540850126C98FC70012EEB8 /* Post.swift in Sources */,
