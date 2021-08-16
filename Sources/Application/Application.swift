@@ -25,6 +25,7 @@ public class App {
         initializeHealthRoutes(app: self)
         initializePostRoutes(app: self)
         initializeUserRoutes(app: self)
+        try initializeImageRoutes(app: self)
     }
 
     public func run() throws {
