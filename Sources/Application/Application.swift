@@ -5,6 +5,7 @@ import Configuration
 import CloudEnvironment
 import KituraContracts
 import Health
+import KituraOpenAPI
 
 public let projectPath = ConfigurationManager.BasePath.project.path
 public let health = Health()
@@ -27,6 +28,7 @@ public class App {
         initializePostRoutes(app: self)
         initializeUserRoutes(app: self)
         try initializeImageRoutes(app: self)
+        KituraOpenAPI.addEndpoints(to: router)
     }
 
     public func run() throws {
