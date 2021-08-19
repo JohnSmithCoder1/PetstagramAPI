@@ -32,6 +32,9 @@ class Persistence {
     }
     
     private static func createTable<T: Model>(_ Table: T.Type) {
+        // Uncomment next line to clear out existing table data when creating a new one
+//        _ = try? Table.dropTableSync()
+        
         do {
             try Table.createTableSync()
         } catch let tableError {

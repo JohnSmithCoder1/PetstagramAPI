@@ -3626,9 +3626,9 @@
 		055621AB26CEBDFD005D2ACC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				055621B026CEBE69005D2ACC /* Persistence.swift */,
 				055621AC26CEBE4E005D2ACC /* Post.swift */,
 				055621AD26CEBE4E005D2ACC /* UserAuthentication.swift */,
-				055621B026CEBE69005D2ACC /* Persistence.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
