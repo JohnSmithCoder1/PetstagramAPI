@@ -34,6 +34,7 @@
 /* Begin PBXBuildFile section */
 		0556231826CED1E7005D2ACC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556231626CED1E7005D2ACC /* Post.swift */; };
 		0556231926CED1E7005D2ACC /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556231726CED1E7005D2ACC /* UserAuthentication.swift */; };
+		0556231B26CED418005D2ACC /* UserAuthentication+server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556231A26CED418005D2ACC /* UserAuthentication+server.swift */; };
 		OBJ_1000 /* TypeSafeMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_336 /* TypeSafeMiddleware.swift */; };
 		OBJ_1001 /* BodyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_338 /* BodyParser.swift */; };
 		OBJ_1002 /* BodyParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_339 /* BodyParserProtocol.swift */; };
@@ -3229,6 +3230,7 @@
 /* Begin PBXFileReference section */
 		0556231626CED1E7005D2ACC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = "../../../../Petstagram/Petstagram/Service Layer/Models/Post.swift"; sourceTree = "<group>"; };
 		0556231726CED1E7005D2ACC /* UserAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAuthentication.swift; path = "../../../../Petstagram/Petstagram/Service Layer/Models/UserAuthentication.swift"; sourceTree = "<group>"; };
+		0556231A26CED418005D2ACC /* UserAuthentication+server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAuthentication+server.swift"; sourceTree = "<group>"; };
 		"CloudEnvironment::CloudEnvironment::Product" /* CloudEnvironment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudEnvironment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudFoundryEnv::CloudFoundryEnv::Product" /* CloudFoundryEnv.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudFoundryEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Configuration::Configuration::Product" /* Configuration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Configuration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4274,6 +4276,7 @@
 				OBJ_14 /* Persistence.swift */,
 				0556231626CED1E7005D2ACC /* Post.swift */,
 				0556231726CED1E7005D2ACC /* UserAuthentication.swift */,
+				0556231A26CED418005D2ACC /* UserAuthentication+server.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -7590,6 +7593,7 @@
 				OBJ_517 /* Persistence.swift in Sources */,
 				0556231926CED1E7005D2ACC /* UserAuthentication.swift in Sources */,
 				OBJ_518 /* HealthRoutes.swift in Sources */,
+				0556231B26CED418005D2ACC /* UserAuthentication+server.swift in Sources */,
 				OBJ_519 /* ImageRoutes.swift in Sources */,
 				OBJ_520 /* PostRoutes.swift in Sources */,
 				OBJ_521 /* UserRoutes.swift in Sources */,
