@@ -110,12 +110,12 @@
         }
       },
       {
-        "package": "KituraContracts",
-        "repositoryURL": "https://github.com/IBM-Swift/KituraContracts.git",
+        "package": "LoggerAPI",
+        "repositoryURL": "https://github.com/Kitura/LoggerAPI.git",
         "state": {
           "branch": null,
-          "revision": "8418006e39e2efae9b31ae92721cb597ac29c617",
-          "version": "1.2.200"
+          "revision": "e82d34eab3f0b05391082b11ea07d3b70d2f65bb",
+          "version": "1.9.200"
         }
       },
       {
@@ -125,6 +125,42 @@
           "branch": null,
           "revision": "5a2361ba1f005596a2bfa28de76ed4acf1e71c33",
           "version": "3.2.4-swift4"
+        }
+      },
+      {
+        "package": "CloudFoundryEnv",
+        "repositoryURL": "https://github.com/IBM-Swift/Swift-cfenv.git",
+        "state": {
+          "branch": null,
+          "revision": "9fa782d4f533e763566ca35838b4904ddf6dbcbf",
+          "version": "6.0.200"
+        }
+      },
+      {
+        "package": "SwiftKuery",
+        "repositoryURL": "https://github.com/Kitura/Swift-Kuery.git",
+        "state": {
+          "branch": null,
+          "revision": "94f04e06160e054a31d67cc0c93829fe51002f96",
+          "version": "3.0.200"
+        }
+      },
+      {
+        "package": "SwiftKueryORM",
+        "repositoryURL": "https://github.com/IBM-Swift/Swift-Kuery-ORM.git",
+        "state": {
+          "branch": null,
+          "revision": "ebf90f9f4e67bfa5377003eecc00ac3a39f7a991",
+          "version": "0.6.200"
+        }
+      },
+      {
+        "package": "SwiftKueryPostgreSQL",
+        "repositoryURL": "https://github.com/IBM-Swift/Swift-Kuery-PostgreSQL.git",
+        "state": {
+          "branch": null,
+          "revision": "08db7879b7d7edbb73770d90320fa704c5fcee52",
+          "version": "2.1.201"
         }
       },
       {
@@ -143,15 +179,6 @@
           "branch": null,
           "revision": "a8460c44d91ee25e0931be7792fed5e5c8a494a4",
           "version": "2.6.4"
-        }
-      },
-      {
-        "package": "TypeDecoder",
-        "repositoryURL": "https://github.com/IBM-Swift/TypeDecoder.git",
-        "state": {
-          "branch": null,
-          "revision": "28ec01815c0aea9236f92982ca8d351e7112a4a0",
-          "version": "1.3.201"
         }
       }
     ]
