@@ -29,12 +29,16 @@ func initializePostRoutes(app: App) {
     app.router.encoders[.json] = iso8601Encoder
 }
 
-func getPosts(completion: @escaping ([Post]?, RequestError?) -> Void) {
+func getPosts(user: UserAuthentication, completion: @escaping ([Post]?, RequestError?) -> Void) {
     Post.findAll(completion)
 }
 
-func addPost(post: Post, completion: @escaping (Post?, RequestError?) -> Void) {
+func addPost(user: UserAuthentication, post: Post, completion: @escaping (Post?, RequestError?) -> Void) {
     var newPost = post
+    
+    if newPost.createdByUser != user.id {
+        return completion(nil, RequestError.forbidden)
+    }
     
     if newPost.id == nil {
         newPost.id = UUID()
