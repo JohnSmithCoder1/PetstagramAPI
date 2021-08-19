@@ -37,5 +37,16 @@ class Persistence {
                 Log.error("Database connection error: \(String(describing: postError))")
             }
         }
+        
+        do {
+            try UserAuthentication.createTableSync()
+        } catch let userError {
+            if let requestError = userError as? RequestError,
+               requestError.rawValue == RequestError.ormQueryError.rawValue {
+                Log.info("Table \(UserAuthentication.tableName) already exists")
+            } else {
+                Log.error("Database connection error: \(String(describing: userError))")
+            }
+        }
     }
 }
