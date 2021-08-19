@@ -10,6 +10,9 @@ import SwiftKueryORM
 import SwiftKueryPostgreSQL
 import LoggerAPI
 
+extension Post: Model { }
+extension UserAuthentication: Model { }
+
 class Persistence {
     static func setUp() {
         let pool = PostgreSQLConnection.createPool(
@@ -23,5 +26,16 @@ class Persistence {
         )
         
         Database.default = Database(pool)
+        
+        do {
+            try Post.createTableSync()
+        } catch let postError {
+            if let requestError = postError as? RequestError,
+               requestError.rawValue == RequestError.ormQueryError.rawValue {
+                Log.info("Table \(Post.tableName) already exists")
+            } else {
+                Log.error("Database connection error: \(String(describing: postError))")
+            }
+        }
     }
 }
