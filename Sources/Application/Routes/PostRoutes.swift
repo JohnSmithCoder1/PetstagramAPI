@@ -8,9 +8,6 @@
 import Foundation
 import KituraContracts
 
-var posts: [Post] = [Post(id: UUID(), caption: "Test Post1", createdAt: Date(), createdBy: "UserName"),
-                     Post(id: UUID(), caption: "Test Post2", createdAt: Date() - (60*60*4), createdBy: "Another User")]
-
 let iso8601Decoder: () -> BodyDecoder = {
     let decoder = JSONDecoder()
     decoder.dateDecodingStrategy = .iso8601
@@ -33,7 +30,7 @@ func initializePostRoutes(app: App) {
 }
 
 func getPosts(completion: @escaping ([Post]?, RequestError?) -> Void) {
-    completion(posts, nil)
+    Post.findAll(completion)
 }
 
 func addPost(post: Post, completion: @escaping (Post?, RequestError?) -> Void) {
@@ -43,6 +40,5 @@ func addPost(post: Post, completion: @escaping (Post?, RequestError?) -> Void) {
         newPost.id = UUID()
     }
     
-    posts.append(newPost)
-    completion(newPost, nil)
+    newPost.save(completion)
 }

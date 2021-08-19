@@ -16,6 +16,7 @@ public class App {
     public init() throws {
         // Configure logging
         initializeLogging()
+        Persistence.setUp()
         // Run the metrics initializer
         initializeMetrics(router: router)
     }
