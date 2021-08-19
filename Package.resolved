@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Cryptor",
-        "repositoryURL": "https://github.com/IBM-Swift/BlueCryptor.git",
-        "state": {
-          "branch": null,
-          "revision": "ee5880e031da4c609f372cf7472476ab51d5dd19",
-          "version": "1.0.200"
-        }
-      },
-      {
         "package": "Socket",
         "repositoryURL": "https://github.com/Kitura/BlueSocket.git",
         "state": {
@@ -83,12 +74,48 @@
         }
       },
       {
+        "package": "Kitura-Credentials",
+        "repositoryURL": "https://github.com/Kitura/Kitura-Credentials.git",
+        "state": {
+          "branch": null,
+          "revision": "9edcb49d50ae57e0065b17e6209c82169aecb207",
+          "version": "2.5.200"
+        }
+      },
+      {
+        "package": "Kitura-CredentialsHTTP",
+        "repositoryURL": "https://github.com/IBM-Swift/Kitura-CredentialsHTTP.git",
+        "state": {
+          "branch": null,
+          "revision": "3c3bd7a088e852b30d8f4a7a7b7ef7e29ec60cab",
+          "version": "2.1.200"
+        }
+      },
+      {
         "package": "Kitura-net",
         "repositoryURL": "https://github.com/IBM-Swift/Kitura-net.git",
         "state": {
           "branch": null,
           "revision": "e017a57772eb477c294d72b25ab9ae38d25539f5",
           "version": "2.4.200"
+        }
+      },
+      {
+        "package": "KituraOpenAPI",
+        "repositoryURL": "https://github.com/IBM-Swift/Kitura-OpenAPI.git",
+        "state": {
+          "branch": null,
+          "revision": "7761bdfcbe16b74913fff12f5c523a75ec4c8f09",
+          "version": "1.4.0"
+        }
+      },
+      {
+        "package": "Kitura-Session",
+        "repositoryURL": "https://github.com/Kitura/Kitura-Session.git",
+        "state": {
+          "branch": null,
+          "revision": "501de45890c6942f263a56145c9bca571002e09f",
+          "version": "3.3.201"
         }
       },
       {
@@ -110,12 +137,12 @@
         }
       },
       {
-        "package": "LoggerAPI",
-        "repositoryURL": "https://github.com/Kitura/LoggerAPI.git",
+        "package": "KituraContracts",
+        "repositoryURL": "https://github.com/Kitura/KituraContracts.git",
         "state": {
           "branch": null,
-          "revision": "e82d34eab3f0b05391082b11ea07d3b70d2f65bb",
-          "version": "1.9.200"
+          "revision": "8418006e39e2efae9b31ae92721cb597ac29c617",
+          "version": "1.2.200"
         }
       },
       {
@@ -179,6 +206,15 @@
           "branch": null,
           "revision": "a8460c44d91ee25e0931be7792fed5e5c8a494a4",
           "version": "2.6.4"
+        }
+      },
+      {
+        "package": "TypeDecoder",
+        "repositoryURL": "https://github.com/Kitura/TypeDecoder.git",
+        "state": {
+          "branch": null,
+          "revision": "28ec01815c0aea9236f92982ca8d351e7112a4a0",
+          "version": "1.3.201"
         }
       }
     ]
