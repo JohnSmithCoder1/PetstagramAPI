@@ -27,25 +27,19 @@ class Persistence {
         
         Database.default = Database(pool)
         
+        createTable(Post.self)
+        createTable(UserAuthentication.self)
+    }
+    
+    private static func createTable<T: Model>(_ Table: T.Type) {
         do {
-            try Post.createTableSync()
-        } catch let postError {
-            if let requestError = postError as? RequestError,
+            try Table.createTableSync()
+        } catch let tableError {
+            if let requestError = tableError as? RequestError,
                requestError.rawValue == RequestError.ormQueryError.rawValue {
-                Log.info("Table \(Post.tableName) already exists")
+                Log.info("Table \(Table.tableName) already exists")
             } else {
-                Log.error("Database connection error: \(String(describing: postError))")
-            }
-        }
-        
-        do {
-            try UserAuthentication.createTableSync()
-        } catch let userError {
-            if let requestError = userError as? RequestError,
-               requestError.rawValue == RequestError.ormQueryError.rawValue {
-                Log.info("Table \(UserAuthentication.tableName) already exists")
-            } else {
-                Log.error("Database connection error: \(String(describing: userError))")
+                Log.error("Database connection error: \(String(describing: tableError))")
             }
         }
     }
