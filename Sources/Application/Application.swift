@@ -33,7 +33,11 @@ public class App {
 
     public func run() throws {
         try postInit()
-        Kitura.addHTTPServer(onPort: cloudEnv.port, with: router)
+        
+        let certificateKeyFile = "\(projectPath)/certs/PetstagramAPI.p12"
+        let config = SSLConfig(withChainFilePath: certificateKeyFile, withPassword: "petstagram", usingSelfSignedCerts: false)
+        
+        Kitura.addHTTPServer(onPort: cloudEnv.port, with: router, withSSL: config)
         Kitura.run()
     }
 }
