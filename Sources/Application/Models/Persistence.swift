@@ -11,6 +11,7 @@ import SwiftKueryPostgreSQL
 import LoggerAPI
 
 extension Post: Model { }
+extension Like: Model { }
 extension UserAuthentication: Model { }
 
 class Persistence {
@@ -28,6 +29,7 @@ class Persistence {
         Database.default = Database(pool)
         
         createTable(Post.self)
+        createTable(Like.self)
         createTable(UserAuthentication.self)
     }
     
