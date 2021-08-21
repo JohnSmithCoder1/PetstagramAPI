@@ -7,6 +7,7 @@
 
 import Foundation
 import KituraContracts
+import SwiftKuery
 
 let iso8601Decoder: () -> BodyDecoder = {
     let decoder = JSONDecoder()
@@ -30,7 +31,35 @@ func initializePostRoutes(app: App) {
 }
 
 func getPosts(user: UserAuthentication, completion: @escaping ([Post]?, RequestError?) -> Void) {
-    Post.findAll(completion)
+    let postTable: Table
+    let likeTable: Table
+    
+    do {
+        postTable = try Post.getTable()
+        likeTable = try Like.getTable()
+    } catch {
+        completion(nil, .ormInternalError)
+        
+        return
+    }
+    
+    guard
+        let postIdColumn = postTable.columns.first(where: { $0.name == "id" }),
+        let likePostIdColumn = likeTable.columns.first(where: { $0.name == "postId" }),
+        let likeDateColumn = likeTable.columns.first(where: { $0.name == "createdAt" }),
+        let likeUserIdColumn = likeTable.columns.first(where: { $0.name == "createdByUser" })
+    else {
+        completion(nil, .ormInternalError)
+        
+        return
+    }
+    
+    var selectFields: [Column] = []
+    selectFields.append(contentsOf: postTable.columns)
+    selectFields.append(likeDateColumn.as("likedDate"))
+    
+    let query = Select(selectFields, from: postTable).leftJoin(likeTable).on(likePostIdColumn == postIdColumn && likeUserIdColumn == user.id)
+    Post.executeQuery(query: query, completion)
 }
 
 func addPost(user: UserAuthentication, post: Post, completion: @escaping (Post?, RequestError?) -> Void) {
