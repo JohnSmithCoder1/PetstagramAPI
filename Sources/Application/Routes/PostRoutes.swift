@@ -32,33 +32,22 @@ func initializePostRoutes(app: App) {
 
 func getPosts(user: UserAuthentication, completion: @escaping ([Post]?, RequestError?) -> Void) {
     let postTable: Table
-    let likeTable: Table
     
     do {
         postTable = try Post.getTable()
-        likeTable = try Like.getTable()
     } catch {
         completion(nil, .ormInternalError)
         
         return
     }
     
-    guard
-        let postIdColumn = postTable.columns.first(where: { $0.name == "id" }),
-        let likePostIdColumn = likeTable.columns.first(where: { $0.name == "postId" }),
-        let likeDateColumn = likeTable.columns.first(where: { $0.name == "createdAt" }),
-        let likeUserIdColumn = likeTable.columns.first(where: { $0.name == "createdByUser" })
-    else {
-        completion(nil, .ormInternalError)
-        
-        return
-    }
-    
     var selectFields: [Column] = []
-    selectFields.append(contentsOf: postTable.columns.filter({ $0.name != "likedDate" }))
-    selectFields.append(likeDateColumn.as("likedDate"))
+    selectFields.append(contentsOf: postTable.columns.filter({ $0.name != "isLiked" }))
     
-    let query = Select(selectFields, from: postTable).leftJoin(likeTable).on(likePostIdColumn == postIdColumn && likeUserIdColumn == user.id)
+    let fields = selectFields.map({ "\"\(postTable.nameInQuery)\".\"\($0.alias ?? $0.name)\""}).joined(separator: ",")
+    
+    let query = Raw(query: "select \(fields), case when exists(select * from \"Likes\" where \"postId\" = \"Posts\".id and \"createdByUser\" = '\(user.id)') then true else false end as \"isLiked\" from", table: postTable)
+    
     Post.executeQuery(query: query, completion)
 }
 
