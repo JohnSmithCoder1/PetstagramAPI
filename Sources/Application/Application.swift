@@ -28,6 +28,7 @@ public class App {
         initializePostRoutes(app: self)
         initializeUserRoutes(app: self)
         try initializeImageRoutes(app: self)
+        initializeLikeRoutes(app: self)
         KituraOpenAPI.addEndpoints(to: router)
     }
 
