@@ -34,10 +34,12 @@ public class App {
     public func run() throws {
         try postInit()
         
-        let certificateKeyFile = "\(projectPath)/certs/PetstagramAPI.p12"
-        let config = SSLConfig(withChainFilePath: certificateKeyFile, withPassword: "petstagram", usingSelfSignedCerts: false)
-        
-        Kitura.addHTTPServer(onPort: cloudEnv.port, with: router, withSSL: config)
+        Kitura.addHTTPServer(onPort: cloudEnv.port, with: router)
+        #warning("Comment above line and uncomment below lines to add SSL")
+//        let certificateKeyFile = "\(projectPath)/certs/PetstagramAPI.p12"
+//        let config = SSLConfig(withChainFilePath: certificateKeyFile, withPassword: "petstagram", usingSelfSignedCerts: false)
+//        
+//        Kitura.addHTTPServer(onPort: cloudEnv.port, with: router, withSSL: config)
         Kitura.run()
     }
 }
