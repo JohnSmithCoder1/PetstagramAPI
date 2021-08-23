@@ -55,7 +55,7 @@ func getPosts(user: UserAuthentication, completion: @escaping ([Post]?, RequestE
     }
     
     var selectFields: [Column] = []
-    selectFields.append(contentsOf: postTable.columns)
+    selectFields.append(contentsOf: postTable.columns.filter({ $0.name != "likedDate" }))
     selectFields.append(likeDateColumn.as("likedDate"))
     
     let query = Select(selectFields, from: postTable).leftJoin(likeTable).on(likePostIdColumn == postIdColumn && likeUserIdColumn == user.id)
