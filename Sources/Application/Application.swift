@@ -18,6 +18,7 @@ public class App {
         // Configure logging
         initializeLogging()
         Persistence.setUp()
+        
         // Run the metrics initializer
         initializeMetrics(router: router)
     }
@@ -29,6 +30,7 @@ public class App {
         initializeUserRoutes(app: self)
         try initializeImageRoutes(app: self)
         initializeLikeRoutes(app: self)
+        initializeCommentRoutes(app: self)
         KituraOpenAPI.addEndpoints(to: router)
     }
 
@@ -36,6 +38,7 @@ public class App {
         try postInit()
         
         Kitura.addHTTPServer(onPort: cloudEnv.port, with: router)
+
         #warning("Comment above line and uncomment below lines to add SSL")
 //        let certificateKeyFile = "\(projectPath)/certs/PetstagramAPI.p12"
 //        let config = SSLConfig(withChainFilePath: certificateKeyFile, withPassword: "petstagram", usingSelfSignedCerts: false)
