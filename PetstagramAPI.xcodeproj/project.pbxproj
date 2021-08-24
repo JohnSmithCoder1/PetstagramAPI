@@ -38,6 +38,7 @@
 		0556231F26D1422D005D2ACC /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0556231E26D1422C005D2ACC /* Like.swift */; };
 		059CAE2B26D41B86008A0EAF /* LikeRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059CAE2A26D41B86008A0EAF /* LikeRoutes.swift */; };
 		059CAE3126D55EE7008A0EAF /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059CAE3026D55EE7008A0EAF /* Comment.swift */; };
+		059CAE3326D55F54008A0EAF /* CommentRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059CAE3226D55F54008A0EAF /* CommentRoutes.swift */; };
 		OBJ_1000 /* TypeSafeMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_336 /* TypeSafeMiddleware.swift */; };
 		OBJ_1001 /* BodyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_338 /* BodyParser.swift */; };
 		OBJ_1002 /* BodyParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_339 /* BodyParserProtocol.swift */; };
@@ -3237,6 +3238,7 @@
 		0556231E26D1422C005D2ACC /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Like.swift; path = "../../../../Petstagram/Petstagram/Service Layer/Models/Like.swift"; sourceTree = "<group>"; };
 		059CAE2A26D41B86008A0EAF /* LikeRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeRoutes.swift; sourceTree = "<group>"; };
 		059CAE3026D55EE7008A0EAF /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = "../../../../Petstagram/Petstagram/Service Layer/Models/Comment.swift"; sourceTree = "<group>"; };
+		059CAE3226D55F54008A0EAF /* CommentRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRoutes.swift; sourceTree = "<group>"; };
 		"CloudEnvironment::CloudEnvironment::Product" /* CloudEnvironment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudEnvironment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudFoundryEnv::CloudFoundryEnv::Product" /* CloudFoundryEnv.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudFoundryEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Configuration::Configuration::Product" /* Configuration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Configuration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4344,6 +4346,7 @@
 				OBJ_18 /* PostRoutes.swift */,
 				OBJ_19 /* UserRoutes.swift */,
 				059CAE2A26D41B86008A0EAF /* LikeRoutes.swift */,
+				059CAE3226D55F54008A0EAF /* CommentRoutes.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -7597,6 +7600,7 @@
 				OBJ_513 /* Application.swift in Sources */,
 				OBJ_514 /* InitializationError.swift in Sources */,
 				059CAE2B26D41B86008A0EAF /* LikeRoutes.swift in Sources */,
+				059CAE3326D55F54008A0EAF /* CommentRoutes.swift in Sources */,
 				OBJ_515 /* Logging.swift in Sources */,
 				OBJ_516 /* Metrics.swift in Sources */,
 				0556231F26D1422D005D2ACC /* Like.swift in Sources */,
