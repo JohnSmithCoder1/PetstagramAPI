@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import KituraContracts
+import Kitura
 
 func initializeCommentRoutes(app: App) {
     app.router.post("/api/v1/comments", handler: addComment)
