@@ -13,6 +13,7 @@ import LoggerAPI
 extension Post: Model { }
 extension Like: Model { }
 extension UserAuthentication: Model { }
+extension Comment: Model { }
 
 class Persistence {
     static func setUp() {
@@ -31,6 +32,7 @@ class Persistence {
         createTable(Post.self)
         createTable(Like.self)
         createTable(UserAuthentication.self)
+        createTable(Comment.self)
     }
     
     private static func createTable<T: Model>(_ Table: T.Type) {
