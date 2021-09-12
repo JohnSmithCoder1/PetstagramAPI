@@ -28,13 +28,19 @@ func addLike(user: UserAuthentication, like: Like, completion: @escaping (Like?,
 }
 
 func deleteLike(user: UserAuthentication, query: LikeParams, completion: @escaping (RequestError?) -> Void) {
-    guard let foundLike = foundLikes?.first else {
-        return completion(error ?? .notFound)
+    if query.createdByUser != user.id {
+        return completion(RequestError.forbidden)
     }
     
-    guard let likeId = foundLike.id else {
-        return completion(.ormInternalError)
+    Like.findAll(matching: query) { foundLikes, error in
+        guard let foundLike = foundLikes?.first else {
+            return completion(error ?? .notFound)
+        }
+        
+        guard let likeId = foundLike.id else {
+            return completion(.ormInternalError)
+        }
+        
+        Like.delete(id: likeId, completion)
     }
-    
-    Like.delete(id: likeId, completion)
 }

@@ -13,7 +13,7 @@ func initializeCommentRoutes(app: App) {
     app.router.get("/api/v1/comments", handler: getComments)
 }
 
-func addComment(user: UserAuthentication, comment: Comment, completion: @escaping (Comment?, RequestError) -> Void) {
+func addComment(user: UserAuthentication, comment: Comment, completion: @escaping (Comment?, RequestError?) -> Void) {
     var newComment = comment
     
     if newComment.createdByUser != user.id {
